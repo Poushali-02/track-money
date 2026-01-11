@@ -1,7 +1,10 @@
 export { default as Header } from './Header'
 export { default as Features } from './Features'
+export { default as GoogleAuth } from './GoogleAuth'
 export { default as RemoteSetup } from './RemoteSetup'
 export { default as LocalInstall } from './LocalInstall'
-export { default as GoogleAuth } from './GoogleAuth'
 export { default as UsageGuide } from './UsageGuide'
 export { default as MediaSection } from './MediaSection'
+export { default as Profile } from './Profile'
+export { default as Modal } from './Modal'
+

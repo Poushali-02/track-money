@@ -10,6 +10,7 @@
 .header {
   text-align: center;
   margin-bottom: 4rem;
+  position: relative;
 }
 
 .logo-title {
@@ -60,6 +61,45 @@
   font-weight: 400;
   margin-top: 0.5rem;
   letter-spacing: 0.01em;
+}
+
+/* Profile Mini Button */
+.profile-mini {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.profile-btn {
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.3);
+  color: #60a5fa;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.profile-btn:hover {
+  background: rgba(96, 165, 250, 0.2);
+  border-color: rgba(96, 165, 250, 0.5);
+  transform: translateY(-2px);
+}
+
+.profile-icon {
+  font-size: 1.1rem;
+}
+
+.profile-name {
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Features Section */

@@ -45,25 +45,25 @@ const steps = [
 
 const UsageGuide = () => {
   return (
-    <div className="usage-guide-section">
-      <h2 className="section-title">How to Use in Claude</h2>
-      <p className="guide-intro">
+    <div className="mb-16">
+      <h2 className="text-white/90 text-xl font-semibold mb-4">How to Use in Claude</h2>
+      <p className="text-white/70 mb-8 text-center">
         Follow these steps to start managing your finances with Claude
       </p>
       
-      <div className="steps-timeline">
+      <div className="space-y-6 mb-12">
         {steps.map((step, index) => (
-          <div className="timeline-step" key={index}>
-            <div className="step-number">{step.number}</div>
-            <div className="step-content">
-              <h3 className="step-title">{step.title}</h3>
-              <p className="step-description">{step.description}</p>
-              <div className="step-meta">
-                <span className="step-command">
-                  <span className="command-label">Tool:</span> {step.command}
+          <div className="flex gap-4 bg-white/3 border border-white/8 rounded-2xl p-6 hover:bg-white/5 transition-all" key={index}>
+            <div className="bg-white/10 rounded-lg px-3 py-1 h-fit text-white/90 font-bold">{step.number}</div>
+            <div className="flex-1">
+              <h3 className="text-white text-lg font-semibold mb-2">{step.title}</h3>
+              <p className="text-white/70 mb-3">{step.description}</p>
+              <div className="flex flex-col sm:flex-row gap-2 text-sm">
+                <span className="bg-white/5 border border-white/10 rounded px-2 py-1 text-white/60">
+                  <span className="text-white/90 font-medium">Tool:</span> {step.command}
                 </span>
-                <span className="step-tip">
-                  <span className="tip-icon">💡</span> {step.tip}
+                <span className="bg-blue-500/10 border border-blue-500/20 rounded px-2 py-1 text-blue-300/80">
+                  <span>💡</span> {step.tip}
                 </span>
               </div>
             </div>
@@ -71,28 +71,28 @@ const UsageGuide = () => {
         ))}
       </div>
 
-      <div className="quick-commands">
-        <h3 className="quick-commands-title">Quick Command Reference</h3>
-        <div className="commands-grid">
-          <div className="command-card">
-            <span className="command-emoji">➕</span>
-            <span className="command-name">Add Transaction</span>
-            <code>"Add expense of ₹1000 for rent"</code>
+      <div className="bg-white/3 border border-white/8 rounded-2xl p-8">
+        <h3 className="text-white text-lg font-semibold mb-6">Quick Command Reference</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="bg-white/5 border border-white/10 rounded-lg p-4 hover:bg-white/8 transition-all">
+            <span className="text-2xl mb-2 block">➕</span>
+            <span className="text-white font-medium block mb-2">Add Transaction</span>
+            <code className="text-white/60 text-sm">"Add expense of ₹1000 for rent"</code>
           </div>
-          <div className="command-card">
-            <span className="command-emoji">📊</span>
-            <span className="command-name">Get Balance</span>
-            <code>"What's my current balance?"</code>
+          <div className="bg-white/5 border border-white/10 rounded-lg p-4 hover:bg-white/8 transition-all">
+            <span className="text-2xl mb-2 block">📊</span>
+            <span className="text-white font-medium block mb-2">Get Balance</span>
+            <code className="text-white/60 text-sm">"What's my current balance?"</code>
           </div>
-          <div className="command-card">
-            <span className="command-emoji">🏆</span>
-            <span className="command-name">Top Categories</span>
-            <code>"Show my top spending categories"</code>
+          <div className="bg-white/5 border border-white/10 rounded-lg p-4 hover:bg-white/8 transition-all">
+            <span className="text-2xl mb-2 block">🏆</span>
+            <span className="text-white font-medium block mb-2">Top Categories</span>
+            <code className="text-white/60 text-sm">"Show my top spending categories"</code>
           </div>
-          <div className="command-card">
-            <span className="command-emoji">🔄</span>
-            <span className="command-name">Update Transaction</span>
-            <code>"Update transaction #123 amount to ₹500"</code>
+          <div className="bg-white/5 border border-white/10 rounded-lg p-4 hover:bg-white/8 transition-all">
+            <span className="text-2xl mb-2 block">🔄</span>
+            <span className="text-white font-medium block mb-2">Update Transaction</span>
+            <code className="text-white/60 text-sm">"Update transaction #123 amount to ₹500"</code>
           </div>
         </div>
       </div>
